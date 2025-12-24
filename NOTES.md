@@ -10,7 +10,5 @@ To regenerate the requirements file: `uv pip freeze > requirements.txt`
 ## Known issues
 
 ## URLs
-N.A.
 
 ## Future plans
-* Make a smooth animation when the time is changing

@@ -1,6 +1,10 @@
 # sliding-clock
 Essay on a new kind of design clock
 
+## What is look like?
+
+![Demo of Sliding Clock](docs/sliding_clock.gif)
+
 ## Requirements
 - uv for package management (`pip install uv`)
 - python 3.13+ (`python3 --version`)

@@ -13,14 +13,14 @@ class Slider:
     grey_dark: tuple[int, int, int] = color_from_rgb_pc(28.1, 28.1, 28.1)
     grey_darker: tuple[int, int, int] = color_from_rgb_pc(17.9, 17.9, 17.9)
 
-    def __init__(self, current_digit: int, count_digits: int = 10, digit_size: int = 50) -> None:
+    def __init__(self, current_digit: int, max_digits_included: int = 9, digit_size: int = 50) -> None:
         self._current_digit: int = current_digit
-        self._count_digits = count_digits
+        self._max_digits_included = max_digits_included
         self._digit_size = digit_size
-        self._my_surface = Surface((self._digit_size, self._digit_size * self._count_digits), pygame.SRCALPHA)
+        self._my_surface = Surface((self._digit_size, self._digit_size * (self._max_digits_included + 1)), pygame.SRCALPHA)
 
     def set_current_digit(self, current_digit: int):
-        if current_digit < 0 or current_digit > self._count_digits - 1:
+        if current_digit < 0 or current_digit > self._max_digits_included:
             return
         self._current_digit: int = current_digit
 
@@ -36,7 +36,7 @@ class Slider:
         font_normal: Font = pygame.font.SysFont('Arial', round(self._digit_size * 0.8), bold=True)
         font_current: Font = pygame.font.SysFont('Arial', round(self._digit_size * 0.9), bold=True)
 
-        for i in range(self._count_digits):
+        for i in range(self._max_digits_included + 1):
             text_surface: Surface = font_normal.render(str(i), True, self.grey_light)
             if i == self._current_digit:
                 text_surface: Surface = font_current.render(str(i), True, self.grey_darker)

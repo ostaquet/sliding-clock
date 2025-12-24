@@ -27,14 +27,14 @@ def main():
     digit_size: int = 50
     interspace: int = 15
 
-    slider1: Slider = Slider(2, count_digits=3, digit_size=digit_size)
-    slider2: Slider = Slider(5, count_digits=10, digit_size=digit_size)
+    slider1: Slider = Slider(2, max_digits_included=2, digit_size=digit_size)
+    slider2: Slider = Slider(5, max_digits_included=9, digit_size=digit_size)
 
-    slider3: Slider = Slider(5, count_digits=6, digit_size=digit_size)
-    slider4: Slider = Slider(5, count_digits=10, digit_size=digit_size)
+    slider3: Slider = Slider(5, max_digits_included=5, digit_size=digit_size)
+    slider4: Slider = Slider(5, max_digits_included=9, digit_size=digit_size)
 
-    slider5: Slider = Slider(5, count_digits=6, digit_size=digit_size)
-    slider6: Slider = Slider(5, count_digits=10, digit_size=digit_size)
+    slider5: Slider = Slider(5, max_digits_included=5, digit_size=digit_size)
+    slider6: Slider = Slider(5, max_digits_included=9, digit_size=digit_size)
 
     # Game loop
     running = True
